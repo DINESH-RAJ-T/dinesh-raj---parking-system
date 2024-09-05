@@ -1,0 +1,24 @@
+CREATE DATABASE SmartParkingSystem;
+USE SmartParkingSystem;
+
+CREATE TABLE ParkingSpaces (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    location VARCHAR(255) NOT NULL,
+    isOccupied BOOLEAN NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Reservations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT,
+    parkingSpaceId INT,
+    startTime DATETIME,
+    endTime DATETIME,
+    FOREIGN KEY (userId) REFERENCES Users(id),
+    FOREIGN KEY (parkingSpaceId) REFERENCES ParkingSpaces(id)
+);

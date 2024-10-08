@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDR PARKING SERVICE</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" /> 
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ebe2869c5d.js" crossorigin="anonymous"></script>
+
+    <link href="parking.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg"> <!-- navbar used as heading -->
+    <div class="container-fluid">
+      <a class="navbar-brand " href="#" id="nav-link">
+        <svg viewBox="0 0 24 24" width="57px"  height="57px"  fill="yellow"  xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.197 5.46A.824.824 0 0 0 16.5 5h-9a.824.824 0 0 0-.697.46l-1.988 4.638L5.285 9H3v1.5a.501.501 0 0 0 .5.5 2.572 2.572 0 0 1 .367-.388A2.532 2.532 0 0 0 3 12.522V19.5a.501.501 0 0 0 .5.5h2a.501.501 0 0 0 .5-.5v-1.831A46.229 46.229 0 0 0 12 18a46.244 46.244 0 0 0 6.001-.331L18 19.5a.501.501 0 0 0 .5.5h2a.501.501 0 0 0 .5-.5v-6.978a2.534 2.534 0 0 0-.87-1.909 2.523 2.523 0 0 1 .359.387h.011a.501.501 0 0 0 .5-.5V9h-2.286zM7.66 6h8.68l1.715 4H5.945zM5 19H4v-1.79a1.983 1.983 0 0 0 .613.235c.118.024.254.048.387.071zm15 0h-1v-1.484c.133-.023.269-.047.387-.07A1.989 1.989 0 0 0 20 17.21zm-.525-7.632A1.53 1.53 0 0 1 20 12.522v2.946a1.015 1.015 0 0 1-.808.997A43.178 43.178 0 0 1 12 17a43.255 43.255 0 0 1-7.192-.535A1.015 1.015 0 0 1 4 15.468v-2.946a1.532 1.532 0 0 1 .524-1.156 1.49 1.49 0 0 1 .568-.307L5.296 11h13.406l.205.06a1.493 1.493 0 0 1 .568.308zM17 13h2v1a1 1 0 0 1-1 1h-2zM7 13l1 2H6a1 1 0 0 1-1-1v-1zm2 1h6v1H9z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+        TDR PARKING SERVICE</a>
+    </div>
+  </nav>
+
+  <div class = "container mt-5">
+    <div class ="row">
+        <div class="col-lg-6 col-sm-12 mb-3">
+          <div class="d-flex justify-content-center">
+            <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label" ><i class="bi bi-person"></i>&ensp;Name</label>
+                  <input type="text"  class="form-control" id="name" placeholder="e.g. DINESH RAJ.T">
+                  <div><p id="nameError"></p></div>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label"><i class="bi bi-phone"></i>&ensp;Phone Number</label>
+                  <input type="number" min="0" class="form-control" id="phone" placeholder="e.g.  15052005">
+                  <div ><p id="phoneError"></p></div>
+                </div>
+                <div class="mb-3">
+                  <label for="plate" class="form-label"><i class="fa fa-list-alt" aria-hidden="true"></i>&ensp;License Plate</label>
+                  <input type="text"   class="form-control" id="plate" placeholder="e.g.  TN25AY0000">
+                  <div ><p id="plateError"></p></div>
+                </div>
+                <div class="mb-3">
+                    <label for="model" class="form-label"><i class="lni lni-car-alt"></i>&ensp;Vehicle Model</label>
+                    <input type="text"   class="form-control" id="model" placeholder="e.g.inova">
+                    <div ><p id="modelError"></p></div>
+                </div>
+                <center><button type="button" id="btn1"   class="btn btn-warning">REGISTER</button></center>
+              </form>
+            </div>
+          </div>
+          <div class="appendclass col-lg-6 col-sm-12 ">
+              <!-- table for storing parking info when the car is parked -->
+              <table class="table table-borderless mt-5">
+                <thead>
+                  <p id="parkingHead"><i class="fa fa-product-hunt" aria-hidden="true"></i>&ensp;TDR PARKING DETAILS</p>
+                  <tr>
+                    <th scope="col" id="id">P.ID NO</th>
+                    <th scope="col" id="namE">CUS NAME</th>
+                    <th scope="col" id="phonE">CONTACT NO</th>
+                    <th scope="col" id="platE">PLATE NO</th>                
+                    <th scope="col" id="modeL">V MODEL</th>
+                    <th scope="col" id="arrivaltimE">ARRIVAL TIME</th>
+                    <th scope="col" id="actioN">CUS ACTION</th>
+                  </tr>
+                </thead>
+                <tbody id="parkingtable">
+
+                </tbody>
+                <!-- table for storing parking info when the car is ready to check out -->
+              </table> 
+              <table class="table table-borderless mt-5">
+                <thead>
+                  <p id="receiptHead"><i class="bi bi-receipt"></i>&ensp;TDR RECEIPT DETAILS</p>
+                  
+                  <tr>
+                    <th scope="col">NAME</th>
+                    <th scope="col">PHONE NO</th>
+                    <th scope="col">PLATE NO</th>
+                    <th scope="col">V MODEL</th>
+                    <th scope="col">PARKING TIME</th>
+                    <th scope="col">PARKING COST</th>
+                    <th scope="col" >PRINT RECEIPT</th>
+                    
+                  </tr>
+                </thead>
+                <tbody id="receipttable">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+           <!-- Modal for printing receipt on exit from parking lot -->
+          <div class="container-fluid">
+            <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="loanModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header" id="modalHeader">
+                    <h1 class="modal-title fs-5 text-center" id="receiptModalLabel"></h1>
+                  </div>
+                  <div class="modal-body" id="modalBody">
+
+                  </div>
+                  <div class="modal-footer" id="modalFooter">
+                    <button type="button" class="btn" id="closeBtn" data-bs-dismiss="modal">CLOSE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br><br><br>
+            <hr style="color: #E4A11B;"> 
+            <p  id="footer">Made by DINESH RAJ.T</p>
+          </div>
+
+
+
+
+  <script src="parking.js"></script>
+    
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+  
+  
+
+</body>
+</html>

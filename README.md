@@ -5,15 +5,17 @@ Hlo everyone!
   Title of my project is "Parking Space Management system".
     This is the project which keeps records of the vehicle which is going to park in the parking area and exit from the parking area.
     Tools and Technologies Used in the project is
-          Technology/Domain: Java
-          Front-End: JSP, Html, CSS, JS, Bootstrap.
-          Back-end: MYSQL.
+         
+HTML, CSS, BOOTSTRAP, JAVASCRIPT and HTML2CANVAS were used to make this.
     My project represents about the "Parking Space Management System"
         what it describes is:-
-            1) Customer can book their parking slot through mu website.
-            2) After their confirmation of booking slot, they can proceed to pay for their amount for slot booking.
-            3) After the payment, the confirmation of slot bookinng message will be indicated to them.
-            4) After pickup the vehicle from the slot, customer will again be indicated with the message.
-            5) The admin can see the vehicle details through the database(vehicle parking and pickup from slot).
-            6) The admin can also alot slots for customer(mannually - according to the customer choice).
+            A simple parking system that stores all the necessary info about parked cars in a parking table and when a car is ready
+to check out it transfers all its info to a receipt table and calculates the total amount it's due based on its time of arrival 
+in the receipt table, there is a view button that opens a modal with all the necessary info about the cars stay in the parking lot, and provides
+a download option which clicked downloads a .png format of the modal this is done using html2canvas.
+
+
+The main feature and motive of my project is to avoid violence between customer and security.
+Because customer pays the bill for 2hr but they park the vehicle for 1.30hr so they are paying extra fees for not using the parking.
+My project will help the customer to save their money and avoid violence between security and customer.
   

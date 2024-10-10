@@ -1,7 +1,7 @@
 # dinesh-raj---parking-system
 Hlo everyone!
     Myself Dinesh raj.T from Sathyabama Institute of science and technology.
-  Here i'm uploading my PT-1 project details.
+  Here i'm uploading my PT-1 project details(HCL MINI-PROJECT).
   Title of my project is "Parking Space Management system".
     This is the project which keeps records of the vehicle which is going to park in the parking area and exit from the parking area.
     Tools and Technologies Used in the project is

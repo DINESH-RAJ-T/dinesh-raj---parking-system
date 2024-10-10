@@ -18,4 +18,6 @@ a download option which clicked downloads a .png format of the modal this is don
 The main feature and motive of my project is to avoid violence between customer and security.
 Because customer pays the bill for 2hr but they park the vehicle for 1.30hr so they are paying extra fees for not using the parking.
 My project will help the customer to save their money and avoid violence between security and customer.
+
+Thank you...
   
